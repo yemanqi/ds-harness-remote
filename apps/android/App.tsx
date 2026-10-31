@@ -20,6 +20,7 @@ import {
   type NetworkRoute,
 } from './src/lib/network-route'
 import { Button, ErrorBanner } from './src/ui/components'
+import { InAppWebViewHost } from './src/ui/in-app-webview'
 import { spacing, type } from './src/ui/theme'
 import { ThemeProvider, useTheme, type ThemeColors } from './src/ui/theme-context'
 import { useThemedStyles } from './src/ui/use-themed-styles'
