@@ -561,7 +561,7 @@ export function HostSessionsDrawer({
       <Pressable
         accessibilityRole="button"
         accessibilityLabel="账本"
-        onPress={() => { void WebBrowser.openBrowserAsync('https://dsh.mianqi.top/__portal/books') }}
+        onPress={() => openInAppWebView('https://dsh.mianqi.top/__portal/books', '账本')}
         style={({ pressed }) => [styles.navItem, pressed && styles.pressedBg]}
       >
         <Wallet size={16} color={colors.muted} />
