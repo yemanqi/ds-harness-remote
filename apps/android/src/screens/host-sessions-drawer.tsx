@@ -25,6 +25,8 @@ import {
   ChevronDown,
   ChevronRight,
   Clock,
+  Wallet,
+  MonitorSmartphone,
   Puzzle,
   Folder,
   FolderOpen,
