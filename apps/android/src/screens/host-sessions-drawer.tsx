@@ -558,6 +558,26 @@ export function HostSessionsDrawer({
         <Text style={styles.navItemText}>{strings.automation.nav}</Text>
       </Pressable>
 
+      <Pressable
+        accessibilityRole="button"
+        accessibilityLabel="账本"
+        onPress={() => { void WebBrowser.openBrowserAsync('https://dsh.mianqi.top/__portal/books') }}
+        style={({ pressed }) => [styles.navItem, pressed && styles.pressedBg]}
+      >
+        <Wallet size={16} color={colors.muted} />
+        <Text style={styles.navItemText}>账本</Text>
+      </Pressable>
+
+      <Pressable
+        accessibilityRole="button"
+        accessibilityLabel="登录设备"
+        onPress={() => { void WebBrowser.openBrowserAsync('https://dsh.mianqi.top/__portal/sessions') }}
+        style={({ pressed }) => [styles.navItem, pressed && styles.pressedBg]}
+      >
+        <MonitorSmartphone size={16} color={colors.muted} />
+        <Text style={styles.navItemText}>登录设备</Text>
+      </Pressable>
+
       <ScrollView horizontal showsHorizontalScrollIndicator={false}
         style={{ flexGrow: 0, flexShrink: 0 }} contentContainerStyle={{ paddingHorizontal: spacing.md, gap: spacing.xxs }}>
         {backends.map(value => <Pressable key={value} accessibilityRole="tab"
