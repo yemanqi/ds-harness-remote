@@ -968,7 +968,7 @@ export function HomeActionsMenu({ visible, onClose, onSettings, onAbout, onDevic
             <HomeMenuRow icon={Laptop} label={zhCN.devices.myDevices} onPress={onDevices} />
           )}
           <HomeMenuRow icon={ExternalLink} label="账本" onPress={() => { void WebBrowser.openBrowserAsync('https://dsh.mianqi.top/__portal/books') }} />
-          <HomeMenuRow icon={ExternalLink} label="登录设备" onPress={() => { void Linking.openURL('https://dsh.mianqi.top/__portal/sessions') }} />
+          <HomeMenuRow icon={ExternalLink} label="登录设备" onPress={() => { void WebBrowser.openBrowserAsync('https://dsh.mianqi.top/__portal/sessions') }} />
           {onSwitchServer !== undefined && <HomeMenuRow icon={RotateCcw} label={zhCN.setup.switchServer} onPress={onSwitchServer} />}
           <HomeMenuRow icon={Settings} label={zhCN.settings.title} onPress={onSettings} />
           <HomeMenuRow icon={Info} label={zhCN.settings.about} onPress={onAbout} />
