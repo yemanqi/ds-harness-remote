@@ -31,8 +31,8 @@ export function InAppWebViewHost() {
 
   return (
     <Modal animationType="slide" visible onRequestClose={close} presentationStyle="fullScreen">
-      <View style={[styles.root, { backgroundColor: colors.bg, paddingTop: insets.top }]}>
-        <View style={[styles.bar, { borderBottomColor: colors.border }]}>
+      <View style={[styles.root, { backgroundColor: colors.background, paddingTop: insets.top }]}>
+        <View style={[styles.bar, { borderBottomColor: colors.separator }]}>
           <Text numberOfLines={1} style={[styles.title, { color: colors.ink }]}>{target.title}</Text>
           <Pressable accessibilityRole="button" accessibilityLabel="关闭" onPress={close} hitSlop={12} style={styles.closeBtn}>
             <X size={18} color={colors.ink} />
@@ -46,7 +46,7 @@ export function InAppWebViewHost() {
               <ActivityIndicator color={colors.muted} />
             </View>
           )}
-          style={{ backgroundColor: colors.bg }}
+          style={styles.web}
         />
       </View>
     </Modal>
@@ -56,10 +56,14 @@ export function InAppWebViewHost() {
 const styles = StyleSheet.create({
   root: { flex: 1 },
   bar: {
-    flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between',
-    paddingHorizontal: spacing.md, paddingVertical: spacing.sm, borderBottomWidth: StyleSheet.hairlineWidth,
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: spacing.md,
+    paddingVertical: spacing.sm,
+    borderBottomWidth: StyleSheet.hairlineWidth,
   },
-  title: { flex: 1, fontSize: typography.body, fontWeight: '600' },
+  title: { flex: 1, ...typography.bodyStrong },
   closeBtn: { padding: spacing.xs },
   loading: { flex: 1, alignItems: 'center', justifyContent: 'center' },
+  web: { flex: 1 },
 })
