@@ -571,7 +571,7 @@ export function HostSessionsDrawer({
       <Pressable
         accessibilityRole="button"
         accessibilityLabel="登录设备"
-        onPress={() => { void WebBrowser.openBrowserAsync('https://dsh.mianqi.top/__portal/sessions') }}
+        onPress={() => openInAppWebView('https://dsh.mianqi.top/__portal/sessions', '登录设备')}
         style={({ pressed }) => [styles.navItem, pressed && styles.pressedBg]}
       >
         <MonitorSmartphone size={16} color={colors.muted} />
