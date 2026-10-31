@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { useBrowseMemory, browsePreference } from '../services/browse-memory'
 import * as Application from 'expo-application'
-import * as WebBrowser from 'expo-web-browser'
+import { openInAppWebView } from '../ui/in-app-webview'
 import { File, Paths } from 'expo-file-system'
 import { getContentUriAsync } from 'expo-file-system/legacy'
 import * as IntentLauncher from 'expo-intent-launcher'
