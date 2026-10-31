@@ -383,6 +383,7 @@ function AppNavigator() {
 
   return (
     <View style={styles.flex}>
+      <InAppWebViewHost />
       {route.name === 'server' && <ServerSetupScreen serverExpanded={serverEditorOpen} setServerExpanded={setServerEditorOpen} onMore={openHomeMenu} onBack={routes.length > 1 ? pop : undefined} onComplete={() => reset({ name: 'devices' })} />}
       {route.name === 'devices' && (
         <DevicesScreen
