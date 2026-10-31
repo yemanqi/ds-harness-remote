@@ -235,6 +235,9 @@ jobs:
           DSH_REQUIRE_INTELLIGENT_UI: 'true'
         run: node apps/android/scripts/verify-intelligent-ui-renderer.mjs
 
+      - name: Ensure in-app browser module
+        run: pnpm --dir apps/android exec expo install expo-web-browser
+
       - name: Generate Android project
         run: pnpm --dir apps/android exec expo prebuild --platform android --no-install
 
