@@ -70,7 +70,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Ensure in-app browser module
-        run: pnpm --dir apps/android exec expo install expo-web-browser
+        run: pnpm --dir apps/android exec expo install react-native-webview
 
       - name: Check types
         run: |
